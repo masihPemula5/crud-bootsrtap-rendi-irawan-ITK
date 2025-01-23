@@ -1,0 +1,316 @@
+/* Styling Dasar */
+@import url('https://fonts.cdnfonts.com/css/snow-freeze');
+
+body {
+    margin: 0;
+    padding: 0;
+    font-family: 'Snow Freeze', sans-serif;
+    background: #fff;
+    background-attachment: fixed;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 100vh;
+    color: #3f403f;
+    position: relative;
+    overflow: hidden;
+}
+
+.buttons {
+    position: absolute;
+    top: 20px;
+    right: 20px;
+}
+
+.text{
+    text-align: center;
+    position: absolute;
+    top: 20px;
+
+}
+
+button {
+    margin-left: 10px;
+    padding: 10px 20px;
+    cursor: pointer;
+    font-size: 16px;
+    font-family: sans-serif;
+    font-weight: 700;
+    border: none;
+    background-color: #3f3f3f;
+    box-shadow: 0 10px 0px rgb(30, 30, 30);
+    color: #ffffff;
+    border-radius: 5px;
+}
+button:active{
+    transform: translateY(5px);
+    box-shadow: 0 0px 0px rgb(0, 0, 0);
+}
+
+/* Modal Styling */
+.modal {
+    display: none;
+    position: fixed;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    width: 100%;
+    height: 100%;
+    background-color: rgba(31, 30, 30, 0.7);
+    justify-content: center;
+    align-items: center;
+    place-items: center;
+    min-height: 100vh;
+}
+
+.modal-content {
+    position: relative;
+    background: #fff;
+    color: #333;
+    padding: 20px 30px;
+    border-radius: 10px;
+    width: 80%;
+    max-width: 400px;
+    box-shadow: 0px 10px 30px rgba(0, 0, 0, 0.2);
+    text-align: center;
+    margin: 0 auto;
+    
+}
+
+.modal-content h2 {
+    margin-bottom: 20px;
+    font-size: 24px;
+    color: #3f3f3f;
+}
+
+.input-group {
+    position: relative;
+    margin-bottom: 20px;
+    display: flex;
+    align-items: center;
+    background: #f9f9f9;
+    border: 1px solid #ddd;
+    border-radius: 8px;
+    overflow: hidden;
+}
+
+.input-group i {
+    padding: 10px;
+    color: #666;
+    background: #e0e0e0;
+    border-right: 1px solid #ddd;
+}
+
+.input-group input {
+    flex: 1;
+    border: none;
+    padding: 10px;
+    font-size: 14px;
+    outline: none;
+}
+
+.input-group input::placeholder {
+    color: #aaa;
+}
+
+/* Tombol Submit */
+.btn {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    width: 100%;
+    padding: 10px 20px;
+    font-size: 16px;
+    color: white;
+    background-color: #3f3f3f;
+    box-shadow: 0 10px 0px rgb(30, 30, 30);
+    border: none;
+    border-radius: 8px;
+}
+.btn:active{
+    transform: translateY(5px);
+    box-shadow: 0 0px 0px rgb(30, 30, 30);
+}
+
+/* Tombol Close */
+.close {
+    position: absolute;
+    top: 10px;
+    right: 10px;
+    cursor: pointer;
+    font-size: 40px;
+    color: #333;
+}
+.close:hover {
+    color: #ff0000;
+}
+/* tambahan */
+
+
+
+.snowflake {
+    position: absolute;
+    top: -50px;
+    color: white;
+    font-size: 1em;
+    pointer-events: none;
+    animation: fall linear infinite, sway ease-in-out infinite;
+}
+
+@keyframes fall {
+    0% {
+        top: -50px;
+    }
+    100% {
+        top: 100%;
+    }
+}
+
+@keyframes sway {
+    0%, 100% {
+        transform: translateX(0);
+    }
+    50% {
+        transform: translateX(20px);
+    }
+}
+
+.snow-pile-container {
+    position: absolute;
+    bottom: 0;
+    width: 100%;
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+    align-items: flex-end;
+    z-index: 1;
+}
+
+.snow-pile {
+    width: 5px;
+    height: 5px;
+    background-color: white;
+    margin: 1px;
+    border-radius: 50%;
+}
+
+
+
+.delete-account-btn {
+    background-color: #ff4d4d;
+    color: white;
+    border: none;
+    padding: 10px 20px;
+    border-radius: 5px;
+    cursor: pointer;
+    font-size: 14px;
+    transition: background-color 0.3s ease;
+    box-shadow: 0 10px 0px #b40101;
+    position: absolute;
+    top: 20px;
+    left: 20px;
+}
+
+
+
+/* logo mata form */
+.eye-icon {
+    position: absolute;
+    right: 10px; /* Posisi di sebelah kanan input */
+    top: 50%;
+    transform: translateY(-50%);
+    cursor: pointer;
+    font-size: 20px;
+}
+
+.img{
+    width: 40%;
+    height: 40%;
+    border: 2px red;
+    z-index: -2;
+}
+.img img{
+    width: 100%;
+    height: 100%;
+}
+
+.auth-btn{
+    display: grid;
+    gap: 20px;
+}
+
+.btn-google {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    background-color: #4285f4;
+    color: white;
+    border: none;
+    width: 90%;
+    padding: 10px 20px;
+    border-radius: 5px;
+    font-size: 16px;
+    cursor: pointer;
+    text-decoration: none;
+    box-shadow: 0 10px 0px #015bc8;
+    transition: background-color 0.3s ease;
+    font-family: sans-serif;
+}
+.btn-google:active{
+    transform: translateY(4px);
+    box-shadow: 0 0px 0px #015bc8;
+}
+
+.btn-google:hover {
+    background-color: #357ae8;
+}
+
+.btn-google img {
+    width: 20px;
+    height: 20px;
+    margin-right: 10px;
+    border-radius: 50%;
+}
+.p{
+    font: 1em sans-serif;
+}
+
+@media (max-width: 768px) {
+
+
+   .buttons {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    position: absolute;
+    bottom: -70%;
+    left: 50%;
+    transform: translateX(-50%);
+}
+
+    button {
+        margin-left: 10px;
+        padding: 10px 20px;
+        cursor: pointer;
+        font-size: 16px;
+        font-family: sans-serif;
+        font-weight: 700;
+        border: none;
+        background-color: #3f3f3f;
+        box-shadow: 0 10px 0px rgb(30, 30, 30);
+        color: #ffffff;
+        border-radius: 5px;
+    }
+    button:active{
+        transform: translateY(5px);
+        box-shadow: 0 0px 0px rgb(0, 0, 0);
+    }
+
+   .delete-account-btn{
+    position: relative;
+    bottom: 0;
+    left: 50px;
+    transform: translateX(-50%);
+   }
+   
+}
